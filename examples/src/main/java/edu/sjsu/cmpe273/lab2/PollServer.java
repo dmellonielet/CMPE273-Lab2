@@ -52,7 +52,7 @@ public class PollServer {
         @Override
         public void createPoll(PollRequest req, StreamObserver<PollResponse> responseObserver){
 
-            final AtomicInteger counter = new AtomicInteger(98345678);
+            final AtomicInteger counter = new AtomicInteger(98654321);
             String poll_id = Integer.toHexString(counter.getAndIncrement());
             System.out.println("Moderator Id:"+req.getModeratorId());
             PollResponse reply = PollResponse.newBuilder().setId(poll_id).build();
